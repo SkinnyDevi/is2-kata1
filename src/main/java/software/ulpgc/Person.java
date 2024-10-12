@@ -4,14 +4,12 @@ import java.time.LocalDate;
 
 public class Person {
     public static final int DaysPerYear = 365;
-    private final String name;
     private final LocalDate birthday;
-    private final PhoneNumber phoneNumber;
+    private final ContactDetails contactDetails;
 
-    public Person(String name, LocalDate birthday, PhoneNumber phoneNumber) {
-        this.name = name;
+    public Person(LocalDate birthday, ContactDetails contactDetails) {
         this.birthday = birthday;
-        this.phoneNumber = phoneNumber;
+        this.contactDetails = contactDetails;
     }
 
     public int getAge() {
@@ -25,14 +23,13 @@ public class Person {
     @Override
     public String toString() {
         return "Person{" +
-                "name='" + name + '\'' +
-                ", birthday=" + birthday +
-                ", phoneNumber=" + phoneNumber +
+                "birthday=" + birthday +
+                ", contactDetails=" + contactDetails +
                 '}';
     }
 
     public String getName() {
-        return name;
+        return contactDetails.getName();
     }
 
     public LocalDate getBirthday() {
@@ -40,6 +37,6 @@ public class Person {
     }
 
     public PhoneNumber getPhoneNumber() {
-        return phoneNumber;
+        return contactDetails.getPhoneNumber();
     }
 }
