@@ -6,9 +6,9 @@ public class Person {
     public static final int DaysPerYear = 365;
     private final String name;
     private final LocalDate birthday;
-    private final int phoneNumber;
+    private final PhoneNumber phoneNumber;
 
-    public Person(String name, LocalDate birthday, int phoneNumber) {
+    public Person(String name, LocalDate birthday, PhoneNumber phoneNumber) {
         this.name = name;
         this.birthday = birthday;
         this.phoneNumber = phoneNumber;
@@ -39,7 +39,7 @@ public class Person {
         return birthday;
     }
 
-    public int getPhoneNumber() {
+    public PhoneNumber getPhoneNumber() {
         return phoneNumber;
     }
 }

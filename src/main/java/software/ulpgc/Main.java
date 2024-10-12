@@ -7,7 +7,7 @@ public class Main {
         Person johnDoe = new Person(
                 "John Doe",
                 LocalDate.of(2002, 3, 19),
-                987654321
+                new PhoneNumber(34, 987654321)
         );
         System.out.println(johnDoe);
     }
